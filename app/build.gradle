@@ -1,0 +1,38 @@
+plugins {
+    id 'application'
+    alias(libs.plugins.javafx)
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation libs.junit.jupiter
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    implementation libs.guava
+    implementation libs.sqlite.jdbc
+    implementation libs.javafx.controls
+    implementation libs.javafx.graphics
+    implementation libs.javafx.base
+}
+
+javafx {
+    version = "21.0.2"
+    modules = [ 'javafx.controls', 'javafx.graphics', 'javafx.base' ]
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+application {
+    mainClass = 'com.sukatani.app.MainApp'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

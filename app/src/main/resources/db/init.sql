@@ -83,3 +83,15 @@ CREATE TABLE sensor_data (
     recorded_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY(crop_id) REFERENCES crops(id)
 );
+
+-- Seed data
+INSERT INTO users (full_name, username, password, role) VALUES 
+('Admin Sukatani', 'admin', '240be518fabd2724ddb6f0403f35905d2edfd43b0c510e140d34199c43b3b44b', 'petani');
+
+INSERT INTO crops (user_id, name, planting_date, estimated_harvest_date, estimated_quantity) VALUES 
+(1, 'Padi Ciherang', '2026-01-10', '2026-05-15', 500.0),
+(1, 'Jagung Manis', '2026-02-01', '2026-05-01', 300.0);
+
+INSERT INTO inventory (crop_id, quantity, unit, status) VALUES 
+(1, 150.0, 'kg', 'available'),
+(2, 50.0, 'kg', 'available');

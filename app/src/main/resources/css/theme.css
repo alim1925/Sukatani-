@@ -1,0 +1,47 @@
+.button-primary {
+    -fx-background-color: #2E7D32;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-padding: 10 20;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.button-primary:hover {
+    -fx-background-color: #1B5E20;
+}
+
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 16;
+    -fx-padding: 20;
+    -fx-border-color: #DCE7DC;
+    -fx-border-radius: 16;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 4);
+}
+
+.sidebar {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: transparent #DCE7DC transparent transparent;
+    -fx-border-width: 0 1 0 0;
+}
+
+.nav-item {
+    -fx-background-color: transparent;
+    -fx-text-fill: #64748B;
+    -fx-padding: 12 20;
+    -fx-cursor: hand;
+    -fx-alignment: center-left;
+    -fx-background-radius: 8;
+}
+
+.nav-item:hover {
+    -fx-background-color: #F0F4F0;
+    -fx-text-fill: #2E7D32;
+}
+
+.nav-item-active {
+    -fx-background-color: #E8F5E9;
+    -fx-text-fill: #2E7D32;
+    -fx-font-weight: bold;
+}
